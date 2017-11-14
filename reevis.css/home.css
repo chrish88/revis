@@ -1,0 +1,327 @@
+/************************************************
+                    BASE STYLES
+*************************************************/
+
+html,body {
+    box-sizing: border-box;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    
+}
+
+html {
+    background: url(../imgz/vin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /*background: linear-gradient(to bottom, black 40%, whitesmoke);*/
+
+}
+
+body {
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+span {
+    line-height: 2rem;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/************************************************
+                FLEXBOX CONTAINERS
+*************************************************/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main-header,
+.main-nav,
+.center-wrap,
+.first,
+.second,
+ul,
+li{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-contain {
+    flex: 1;
+}
+
+/*************************************************
+                HEADERS & FOOTERS
+**************************************************/
+
+.main-header {
+    margin-top: 1px;
+    background: black;
+    
+    /*Opacity start*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.80;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+    /*Opacity end*/
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin: 1px;
+    text-decoration: overline;
+}
+
+h1, h2 {
+    color: white;
+    letter-spacing: .10rem;
+    text-transform: uppercase;
+    align-self: center;
+    
+}
+
+footer {
+    margin-top: 2px;
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+    letter-spacing: .05rem;
+    
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    background-color: white;
+    border-radius: 75%
+}
+
+
+/*************************************************
+                    NAVIGATION 
+**************************************************/
+
+#main-nav-ul {
+    text-align: right;
+    font-size: 1.25rem;
+    padding: 0;
+}
+
+.item {
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    letter-spacing: .25rem; 
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.selected {
+    background-color: gray;
+}
+
+
+/*************************************************
+                    WRAPS & DIVS
+**************************************************/
+
+#center-wrap {
+    min-height: 20vh;
+    border: 2px solid grey;
+    border-radius: 5px;
+    margin: 20% 10%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-basis: auto;
+
+}
+
+.col {
+    color: white;
+    
+}
+
+
+/***************** PORTFOLIO PAGE ****************/
+.row {
+    display: flex;
+    margin: 10% auto;
+    min-height: 50vh;
+
+    
+}
+
+.first {
+    justify-content: center;
+    
+    
+
+}
+
+.port-nav {
+    
+}
+
+.port-ul {
+    flex-direction: column;
+    padding: 0;
+    
+}
+
+.port-list {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 6em;
+    
+}
+
+.second {
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+    min-height: 40vh;
+}
+
+.port-img {
+    max-height: 85%;
+    max-width: 85%;
+    padding-left: 50px;
+
+}
+
+
+/************************************************************
+                        MEDIA QUERIES
+*************************************************************/
+
+
+@media (min-width: 769px) {
+   
+    /*******************************************
+                        HEADERS
+    ********************************************/
+        .main-header {
+            justify-content: flex-start;
+            flex-direction: column;
+
+        }
+
+        h1, h2 {
+            text-align: left;
+            letter-spacing: .12rem;
+            padding-left: 2.75%;
+            text-transform: uppercase;
+            width: 100%;
+        }
+
+        h2 {
+            margin-top: 1px;
+            padding-left: 2%;
+        }
+
+    /**********************************************
+                        NAVIGATION
+    ***********************************************/
+
+        .main-nav {
+            justify-content: flex-end;
+            text-transform: uppercase;
+
+        }
+
+        #main-nav-ul {
+            flex-direction: row;
+            margin: 1rem 0;
+            padding: 0;
+            border-top: 2px solid grey;
+            border-bottom: 2px solid grey;
+            align-self: flex-end;
+        }
+
+        .item { 
+            padding: 0 10px;
+            border-top: 10px;
+            border-color: white;
+            font-size: 1rem;
+            letter-spacing: .25rem;
+        }
+
+        a {
+            padding: 10px;
+
+        }
+
+    /***********************************************
+                    WRAPS & CONTAINERS
+    ************************************************/
+
+         #center-wrap {
+            min-height: 55vh;
+            margin: 10%;
+
+        }
+    /***********************************************
+                    PORTFOLIO PAGE
+    ************************************************/
+
+
+        .row {
+            margin: 10% auto;
+            max-height: 75vh;
+            max-width: 85%;
+
+        }
+
+        .col {
+            flex: 1;
+        }
+        
+        .first{
+            align-items: center;
+            letter-spacing: .25rem
+        }
+
+        .second {
+            flex: 3;
+        }
+
+        
+        .list1, .list2, .list3 {
+            border-bottom: 2px solid grey;
+    }
+}
+
+
+@media (min-width: 1025px) {
+    
+    
+    
+    
+}
+
