@@ -2,24 +2,21 @@
                     BASE STYLES
 *************************************************/
 
-html,body {
+html,
+body {
     box-sizing: border-box;
     font-size: 16px;
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    
 }
 
 html {
     background: url(../imgz/vin.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    
     /*background: linear-gradient(to bottom, black 40%, whitesmoke);*/
-
 }
 
 body {
@@ -39,21 +36,24 @@ img {
     max-width: 100%;
 }
 
+
 /************************************************
                 FLEXBOX CONTAINERS
 *************************************************/
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
+
 .main-header,
 .main-nav,
 .center-wrap,
 .first,
 .second,
 ul,
-li{
+li {
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
@@ -63,6 +63,7 @@ li{
     flex: 1;
 }
 
+
 /*************************************************
                 HEADERS & FOOTERS
 **************************************************/
@@ -70,7 +71,6 @@ li{
 .main-header {
     margin-top: 1px;
     background: black;
-    
     /*Opacity start*/
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     filter: alpha(opacity=80);
@@ -83,7 +83,6 @@ li{
 h1 {
     font-size: 3em;
     margin-bottom: 0;
-
 }
 
 h2 {
@@ -92,12 +91,12 @@ h2 {
     text-decoration: overline;
 }
 
-h1, h2 {
+h1,
+h2 {
     color: white;
     letter-spacing: .10rem;
     text-transform: uppercase;
     align-self: center;
-    
 }
 
 footer {
@@ -106,7 +105,6 @@ footer {
     text-align: center;
     color: white;
     letter-spacing: .05rem;
-    
 }
 
 .social-icon {
@@ -133,7 +131,7 @@ footer {
     background-color: black;
     text-align: center;
     padding: 10px;
-    letter-spacing: .25rem; 
+    letter-spacing: .25rem;
     transition: background 1s;
 }
 
@@ -145,12 +143,10 @@ a {
 
 .selected {
     background-color: gray;
-    
 }
 
-.item:hover{
+.item:hover {
     background: lightgray;
-    
 }
 
 .main-a:hover {
@@ -158,12 +154,12 @@ a {
 }
 
 
-
 /*************************************************
                     WRAPS & DIVS
 **************************************************/
 
-#center-wrap {
+#index-center-wrap {
+    background: url("imgz/_MG_7394.jpg");
     min-height: 20vh;
     border: 2px solid grey;
     border-radius: 5px;
@@ -172,46 +168,36 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     flex-basis: auto;
-
 }
 
 .col {
     color: white;
-    
 }
 
 
 /***************** PORTFOLIO PAGE ****************/
+
 .row {
     display: flex;
     margin: 10% auto;
     min-height: 50vh;
-
-    
 }
 
 .first {
     justify-content: center;
-    
-    
-
 }
 
-.port-nav {
-    
-}
+.port-nav {}
 
 .port-ul {
     flex-direction: column;
     padding: 0;
-    
 }
 
 .port-list {
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 6em;
-    
 }
 
 .second {
@@ -225,7 +211,6 @@ a {
     max-height: 85%;
     max-width: 85%;
     padding-left: 50px;
-
 }
 
 
@@ -233,109 +218,82 @@ a {
                         MEDIA QUERIES
 *************************************************************/
 
-
 @media (min-width: 769px) {
-   
     /*******************************************
                         HEADERS
     ********************************************/
-        .main-header {
-            justify-content: flex-start;
-            flex-direction: column;
-
-        }
-
-        h1, h2 {
-            text-align: left;
-            letter-spacing: .12rem;
-            padding-left: 2.75%;
-            text-transform: uppercase;
-            width: 100%;
-        }
-
-        h2 {
-            margin-top: 1px;
-            padding-left: 2%;
-        }
-
+    .main-header {
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    h1,
+    h2 {
+        text-align: left;
+        letter-spacing: .12rem;
+        padding-left: 2.75%;
+        text-transform: uppercase;
+        width: 100%;
+    }
+    h2 {
+        margin-top: 1px;
+        padding-left: 2%;
+    }
     /**********************************************
                         NAVIGATION
     ***********************************************/
-
-        .main-nav {
-            justify-content: flex-end;
-            text-transform: uppercase;
-
-        }
-
-        #main-nav-ul {
-            flex-direction: row;
-            margin: 1rem 0 0;
-            padding: 0;
-            border-top: 2px solid grey;
-            border-bottom: 2px solid grey;
-            align-self: flex-end;
-            width: 50%;
-        }
-
-        .item { 
-            padding: 0 17px;
-            border-top: 10px;
-            border-color: white;
-            font-size: 1rem;
-            letter-spacing: .25rem;
-        }
-
-        a {
-            padding: 10px;
-
-        }
-
+    .main-nav {
+        justify-content: flex-end;
+        text-transform: uppercase;
+    }
+    #main-nav-ul {
+        flex-direction: row;
+        margin: 1rem 0 0;
+        padding: 0;
+        border-top: 2px solid grey;
+        border-bottom: 2px solid grey;
+        align-self: flex-end;
+        width: 50%;
+    }
+    .item {
+        padding: 0 17px;
+        border-top: 10px;
+        border-color: white;
+        font-size: 1rem;
+        letter-spacing: .25rem;
+    }
+    a {
+        padding: 10px;
+    }
     /***********************************************
                     WRAPS & CONTAINERS
     ************************************************/
-
-         #center-wrap {
-            min-height: 55vh;
-            margin: 10%;
-
-        }
+    #center-wrap {
+        min-height: 55vh;
+        margin: 10%;
+    }
     /***********************************************
                     PORTFOLIO PAGE
     ************************************************/
-
-
-        .row {
-            margin: 10% auto;
-            max-height: 75vh;
-            max-width: 85%;
-
-        }
-
-        .col {
-            flex: 1;
-        }
-        
-        .first{
-            align-items: center;
-            letter-spacing: .25rem
-        }
-
-        .second {
-            flex: 3;
-        }
-
-        
-        .list1, .list2, .list3 {
-            border-bottom: 2px solid grey;
+    .row {
+        margin: 10% auto;
+        max-height: 75vh;
+        max-width: 85%;
+    }
+    .col {
+        flex: 1;
+    }
+    .first {
+        align-items: center;
+        letter-spacing: .25rem
+    }
+    .second {
+        flex: 3;
+    }
+    .list1,
+    .list2,
+    .list3 {
+        border-bottom: 2px solid grey;
     }
 }
 
-
-@media (min-width: 1025px) {
-    
-    
-    
-    
-}
-
+@media (min-width: 1025px) {}
