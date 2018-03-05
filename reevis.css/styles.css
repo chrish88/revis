@@ -1,3 +1,12 @@
+:root {
+    --myBlue: rgba(0, 0, 228, 0.3);
+    --myPurp: rgba(161, 7, 161, 0.3);
+    --myWhite: rgba(255, 255, 255, 0.76);
+    --white: rgb(224, 219, 219);
+    --myBlack: rgba(22, 21, 21, 0.74);
+}
+
+
 /************************************************
                     BASE STYLES
 *************************************************/
@@ -5,43 +14,182 @@
 html,
 body {
     box-sizing: border-box;
-    font-size: 16px;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 html {
-    background: url(../imgz/vin.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    font-size: 16px;
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Quattrocento', serif;
 }
 
 
 /*************************************************
-                HEADERS & FOOTERS
+                Index.html
 **************************************************/
 
-footer {
-    margin-top: 2px;
-    padding-top: 10px;
+.index-container {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+
+/********* Header Top ***********/
+
+.index-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1fr, 2fr));
+    padding: 0;
+    margin: 0;
+    /* background: url(../imgz/Portfolio/IMG_0796.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.index-main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: .625rem;
+    border-radius: 5px 5px 0 0;
+    color: white;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 1px #000000;
+    /* text-shadow: 1px 1px 1px #000; */
+    font-weight: 200;
+    grid-row: 2 / 3;
+}
+
+.index-main-header>* {
+    margin: 3px;
+    padding: 0 0.425rem;
+    background: rgba(184, 168, 168, 0.521);
+    align-self: center;
+}
+
+.index-main-header h2 {
+    font-weight: 100;
+}
+
+
+/******* NAVIGATION ********/
+
+.index-body {
+    background: url(../imgz/vin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.index-main-nav-div {
+    display: grid;
+    min-height: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    padding: 0.625rem;
+    list-style: none;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.438);
+    font-weight: 100;
+}
+
+.index-list {
+    /* display: grid;
+    min-height: 100%;
+    min-width: 80%;
+    grid-template-rows: repeat(auto-fit, minmax(25px, auto));
+    border: 1px solid black;
+    box-shadow: 2px 2px 10px black; */
+}
+
+.index-list a {
+    max-height: 25px;
     text-align: center;
+    text-decoration: none;
+    letter-spacing: 5px;
+    padding: 0;
+    margin: 0;
+    color: var(--myWhite);
+    text-shadow: 2px 2px 2px #000;
+    position: relative;
+}
+
+.index-main-nav-div a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--myBlack);
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.index-main-nav-div a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+
+/******** Middle Content **********/
+
+.index-center-wrap {
+    background: var(--myWhite);
+}
+
+.center-wrap-div {
+    margin: 3.125rem;
+    padding: 0.625rem;
+    text-align: center;
+    background: var(--white);
+    box-shadow: 2px 2px 10px var(--myBlack);
+}
+
+.center-wrap-div h1::before,
+.center-wrap-div h1::after {
+    content: "";
+    display: block;
+    height: 5px;
+    background: var(--myBlack);
+}
+
+{}
+
+
+/******* FOOTER ********/
+
+footer {
+    grid-row: 4/5;
+    text-align: center;
+    background: var(--myBlack);
     color: white;
     letter-spacing: .05rem;
+    font-size: 0.75rem;
 }
 
 .social-icon {
     width: 30px;
     height: 30px;
-    margin: 0 5px;
+    margin: 5px;
     background-color: white;
     border-radius: 75%
 }
 
 
 /*************************************************
-                    NAVIGATION 
+                    PORTFOLIO.html 
 **************************************************/
 
 
