@@ -2,6 +2,7 @@
     --myBlue: rgba(0, 0, 228, 0.3);
     --myPurp: rgba(161, 7, 161, 0.3);
     --myWhite: rgba(255, 255, 255, 0.76);
+    --myGrey: rgb(161, 155, 155);
     --white: rgb(224, 219, 219);
     --myBlack: rgba(22, 21, 21, 0.74);
 }
@@ -36,7 +37,10 @@ body {
 .index-container {
     min-height: 100%;
     display: grid;
-    grid-template-rows: 1fr auto;
+    /* grid-template-rows: 1fr auto; */
+    background: url(../imgz/Portfolio/IMG_0888.jpg);
+    background-size: cover;
+    background-position: bottom;
 }
 
 
@@ -56,7 +60,7 @@ body {
 .index-main-header {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    
     padding: .625rem;
     border-radius: 5px 5px 0 0;
     color: white;
@@ -64,7 +68,7 @@ body {
     text-shadow: 2px 2px 1px #000000;
     /* text-shadow: 1px 1px 1px #000; */
     font-weight: 200;
-    grid-row: 2 / 3;
+    
 }
 
 .index-main-header>* {
@@ -76,16 +80,21 @@ body {
 
 .index-main-header h2 {
     font-weight: 100;
+    margin-top: 10px;
 }
 
 
 /******* NAVIGATION ********/
 
 .index-body {
-    background: url(../imgz/vin.jpg);
+    background: var (var(--myWhite));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.nav-div{
+    height: 52px;
 }
 
 .index-main-nav-div {
@@ -96,7 +105,7 @@ body {
     padding: 0.625rem;
     list-style: none;
     font-size: 1.2rem;
-    background: rgba(255, 255, 255, 0.438);
+    background: rgba(43, 40, 40, 0.438);
     font-weight: 100;
 }
 
@@ -128,7 +137,7 @@ body {
     height: 1px;
     bottom: 0;
     left: 0;
-    background-color: var(--myBlack);
+    background-color: var(--myWhite);
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
@@ -145,38 +154,99 @@ body {
 
 /******** Middle Content **********/
 
-.index-center-wrap {
-    background: var(--myWhite);
-}
-
-.center-wrap-div {
-    margin: 3.125rem;
-    padding: 0.625rem;
+.about-me,
+.contact {
+    width: 30%;
+    margin: 5rem auto;
     text-align: center;
-    background: var(--white);
-    box-shadow: 2px 2px 10px var(--myBlack);
 }
 
-.center-wrap-div h1::before,
-.center-wrap-div h1::after {
+.about-me h1::after {
     content: "";
+    height: 3px;
+    background: linear-gradient(to right,  rgba(0,0,0,0) 0%,var(--myBlack) 50%,rgba(0,0,0,0) 100%);
     display: block;
-    height: 5px;
-    background: var(--myBlack);
 }
 
-{}
+/*************************************************
+                    PORTFOLIO section
+**************************************************/
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    height: 40rem;
+    background: linear-gradient(to bottom right, var(--myWhite), var(--myGrey));
+    box-shadow: 1px 1px 10px var(--myBlack);
+}
+
+.port-h1{
+    align-self: center;
+}
+
+.port-ul {
+    grid-area: first;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.port-list {
+    margin: 1.5rem 1.5625rem;
+    padding: 5px;
+    font-size: 2.5rem;
+ 
+}
+
+.port-list::after {
+    content: "";
+    height: 1px;
+    background: linear-gradient(to right, rgba(0,0,0,0) 0,  var(--myBlack) 50%,rgba(0,0,0,0) 100%);
+    display: block;
+}
+
+.port-list:hover{
+    cursor: pointer;
+    background: var(--myWhite);
+    font-size: 2.55rem;
+    border-radius: 3px;
+
+}
+
+.second-col {
+    
+}
+
+.slider-1,
+.slider-2,
+.slider-3,
+.slider-4{
+    display: none;
+}
+
 
 
 /******* FOOTER ********/
 
 footer {
-    grid-row: 4/5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-self: flex-end;
     text-align: center;
     background: var(--myBlack);
     color: white;
     letter-spacing: .05rem;
     font-size: 0.75rem;
+}
+
+.social-icon-div{
+    grid-column: 2/3;
+    justify-self: start;
+    padding-left: 10px;
 }
 
 .social-icon {
@@ -187,10 +257,16 @@ footer {
     border-radius: 75%
 }
 
+.copy-div {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: end;
+    padding-right: 10px;
+    margin: 5px;
+    
+    
+}
 
-/*************************************************
-                    PORTFOLIO.html 
-**************************************************/
 
 
 /*************************************************
