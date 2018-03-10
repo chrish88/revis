@@ -1,3 +1,34 @@
+/*************************************
+  MOBILE NAVIGATION SECTION
+ **************************************/
+//declaration
+const $meunuBtn = $('.menu-btn');
+const $meunuBtnDiv = $('.menu-btn-div');
+const $mainNav = $('.mobile-main-nav-ul');
+
+$mainNav.hide();
+
+
+
+
+$(document).ready(function(){
+    
+    $meunuBtnDiv.on('click', function(e){
+        const menuClick = e.target;
+        if (menuClick === $meunuBtn[0]){
+            $mainNav.css({'display': 'flex', 'flex-direction': 'column'});
+        }
+    });
+
+});
+
+
+
+
+
+/*************************************
+ PORTFOLIO SECTION
+ **************************************/
 //declarations
 const $portNav = $('.port-nav');
 const $slider1 = $('.slider-1');
@@ -68,7 +99,7 @@ $secondCol.on('click', function(event){
     if ($clickedImg){
         $mainImg.fadeIn(1500);
         $mainImg.attr('src', imgSrc);
-        $mainImg.css('border', '4px solid var(--myBlack)').css('box-shadow', '1px 1px 10px var(--myBlack)');
+        $mainImg.css({'border': '4px solid var(--myBlack)', 'box-shadow': '1px 1px 10px var(--myBlack)'});
         
     }else{
         $mainImg.hide();

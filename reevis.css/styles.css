@@ -106,11 +106,8 @@ p {
 }
 
 .index-main-nav-div {
-    /* display: grid; */
     width: 100%;
     min-height: 2rem;
-    /* grid-template-columns: repeat(3, 1fr); */
-    justify-items: center;
     padding: 0.625rem;
     list-style: none;
     font-size: 1.2rem;
@@ -159,12 +156,6 @@ p {
 
 /******** Middle Content **********/
 
-.about::after{
-    content: "";
-    min-height: 81px;
-    margin: 1px;
-    
-}
 
 .about-me,
 .contact {
@@ -354,12 +345,44 @@ footer {
 **************************************************/
 
 /* Landscape phones and down */
-@media (max-width: 667px) {
+@media (max-width: 768px) {
     
     
     p {
         font-size: 1rem;
         line-height: 2.00;
+    }
+
+    .menu-btn-div{
+        background: rgba(43, 40, 40, 0.438);
+        width: 100%;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 100;
+        padding: 0.625rem;
+        position: fixed;
+    }
+
+    .menu-btn li {
+        padding: 2.625rem;
+    }
+
+    .menu-btn{
+        background: rgba(43, 40, 40, 0.438);
+        border: none;
+        color: var(--myWhite);
+        letter-spacing: 1.5px;
+    }
+
+    .menu-btn::after{
+        content: "";
+        height: 2px;
+        color: var(--myWhite);
+    }
+
+
+    .index-main-nav-div{
+        display: none;
     }
 
     .index-main-header>* {
@@ -372,25 +395,31 @@ footer {
     width: 90%;
     margin: 5rem auto;
     text-align: center;
-}
+    }
 
-.portfolio{
+    .portfolio{
     height: auto;
-}
+    }
 
-.port-ul{
+    .port-ul{
     flex-direction: column;
-}
+    }
 
-.port-list{
+    .port-list{
     font-size: 1.25rem;
-}
+    }
+
+    .port-list:hover{
+    font-size: 1.75rem;
+    }
 
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
+    .menu-btn-div{
+        display: none;
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
