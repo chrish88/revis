@@ -10,21 +10,40 @@ const $slider4 = $('.slider-4');
 const $portNavList = $('.port-list');
 //array that holds reference to every slider
 const $allSliders = $('.slide');
+//selects portfolio section
+const $portfolioSec = $('.portfolio')
 //select second-col div of porfolio section
 const $secondCol = $('.second-col');
 //selects main image in porfolio section
 let $mainImg = $('.main-img');
+
 //hides main image
 $mainImg.hide(); 
-
 
 //hide all slides
 $allSliders.hide();
 
-//event listener listening for click on port nav
+$(document).ready(function(){
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+});
+
+//event listener listening for click on port nav to display second-col thumbnail
 $portNav.on('click', function(event){
     //create var and set it event.target
     let $clickedLi = $(event.target);
+    //sets portfolio height to auto
+    $portfolioSec.css('height', 'auto');
     //loop through portNavList and return index and element
     $portNavList.each(function(i, element){
         $mainImg.hide();
@@ -36,8 +55,9 @@ $portNav.on('click', function(event){
             currentSlide.fadeIn(1500); 
         }
     });
+    
 
-//event listener listening for click on second-col of porfolio section
+//event listener listening for click on second-col thumbnail image to display as main image
 $secondCol.on('click', function(event){
     //stores event target in variable
     let $clickedImg = $(event.target);

@@ -19,14 +19,17 @@
 
 <body class="index-body">
 
-    <div class="index-container">
+    <div class="index-container" id="top">
 
         <div class="nav-div">
             <nav class="index-main-nav">
                 <div class="index-main-nav-div">
-                    <li class="index-list 1"><a href="index.html">Home</a></li>
-                    <li class="index-list 2"><a href="portfolio.html">Portfolio</a></li>
-                    <li class="index-list 3"><a href="contact.html">Contact</a></li>
+                    <ul class="index-main-nav-ul">
+                        <li class="index-list 1"><a href="#top">Home</a></li>
+                        <li class="index-list 2"><a href="#about">About</a></li>
+                        <li class="index-list 3"><a href="#portfolio">Portfolio</a></li>
+                        <li class="index-list 4"><a href="#contact">Contact</a></li>
+                    </ul>
                 </div>
             </nav>
         </div>
@@ -39,15 +42,21 @@
         </div>
 
         
-    </div>
+    </div  id="about">
         <section class="about-me">
+            <div class="about-span"></div>
             <h1>Hello, Welcome to my web site</h1>
             <p>My name is Ryan Revis-French. I am a Photographer located in Las Vegas, Nv. 
-                I started taking pictures a couple years ago and it quickly developed into a passion.
+                I started taking pictures a couple years ago as a hobby and it quickly developed into a passion. 
+                I am always learning by trying new techniques, and comming up with ideas for capturing the perfect photo.
+                I love taking long Exposures and street shots but I am very much open to all genres of photography.
+                Take a look at my portfolio, it contains some of my favorite photos on my journey so far.
+
+
             </p>
         </section>
 
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <h1 class="port-h1">Portfolio</h1>
 
             <div class="first-col">
@@ -108,11 +117,10 @@
             </div>
         </section>
 
-        <section class="contact">
-            <h1>Contact Me</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti reprehenderit sequi iure dolor dolore, 
-                exercitationem mollitia id, excepturi, maxime asperiores natus architecto voluptatem voluptatibus quidem 
-                ad placeat? Accusamus, non nisi.</p>
+        <section class="contact" id="contact">
+                <p>Thank you for checking out my page, and my portfolio, I hope you liked it.
+                 If you want to contact me, you can email me at <strong>rrevis88@yahoo.com</strong> , or just click the button below.</p>
+            <h2><a class="contact-me-btn" href="mailto:rrevis88@yahoo.com">Contact Me</a></h2>
         </section>
 
         <footer>
