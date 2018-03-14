@@ -104,11 +104,11 @@ $portNav.on('click', function(event) {
         let imgSrc = $clickedImg.attr('src');
 
         //if image is clicked, set main image src to clicked image src
-        if ($clickedImg) {
+        if ($clickedImg.is('img')) {
             $mainImg.fadeIn(1500);
             $mainImg.attr('src', imgSrc);
             $mainImg.css({ 'border': '4px solid var(--myBlack)', 'box-shadow': '1px 1px 10px var(--myBlack)' });
-
+            console.log($clickedImg.is('img'));
         } else {
             $mainImg.hide();
         }
